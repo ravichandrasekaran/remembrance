@@ -1,0 +1,124 @@
+name, age, race, gender_identity, city, state_abbr, date_of_death, manner_of_death, misgendered
+Papi Edwards, 20, Black, transgender woman, Louisville, KY, 2015-01-09, homocide, true
+Lamia Beard, 30, Black, transgender woman, Norfolk, VA, 2015-01-17, homocide, true
+Ty Underwood, 24, Black, transgender woman, Tyler, TX, 2015-01-26, homocide, false
+Yazmin Vash Payne, 33, Black, transgender woman, Los Angeles, CAR, 2015-01-31, homocide, false
+Taja Gabrielle DeJesus, 33, Latina, transgender woman, San Francisco, CA, 2015-02-01, homocide, false
+Penny Proud, 21, Black, transgender woman, New Orleans, LA, 2015-02-10, homocide, true
+Kristina Gomez Reinwald, 46, Latina, transgender woman, Miami, FL, 2015-02-15, homocide, false
+Keyshia Blige, 33, Black, transgender woman, Aurora, IL, 2015-03-01, homocide, true
+London Kiki Chanel, 21, Black, transgender woman, Philadelphia, PA, 2015-05-18, homocide, false
+Mercedes Williamson, 17, White, transgender woman, George County, AL, 2015-06-02, homocide, false
+Jasmine Collins, 32, Black, transgender woman, Kansas City, MO, 2015-06-23, homocide, true
+Ashton O'Hara, 25, Black, non-binary, Detroit, MI, 2015-07-14, homocide, false
+India Clarke, 25, Black, transgender woman, Tampa, FL, 2015-07-21, homocide, false
+K.C. Haggard, 66, White, transgender woman, Fresno, CA, 2015-07-23, homocide, false
+Shade Schuler, 22, Black, transgender woman, Dallas, TX, 2015-07-29, homocide, true
+Amber Monroe, 20, Black, transgender woman, Detroit, MI, 2015-08-08, homocide, false
+Kandis Capri, 35, Black, transgender woman, Phoenix, AZ, 2015-08-11, homocide, false
+Elisha Walker, 20, Black, transgender woman, Salisbury, NC, 2015-08-13, homocide, false
+Tamara Dominguez, 36, Latina, transgender woman, Kansas City, MO, 2015-08-15, homocide, true
+Keisha Jenkins, 22, Black, transgender woman, Philadelphia, PA, 2015-10-06, homocide, false
+Zella Ziona, 21, Black, transgender woman, Gaithersburg, MD, 2015-10-15, homocide, true
+Nikki Kuhnhausen, 17, , transgender woman, Larch Mountain, WA, 2019-12-07, homocide, false
+Yahira Nesby, 33, Black, transgender woman, New York City, NY, 2019-12-19, homocide, false
+Mia Penny, , Black, transgender woman, Washington, DC, 2019-12-29, homocide, false
+Layleen Cubilette-Polanco, 27, Black, transgender woman, New York City, NY, 2019-06-07, , false
+Christa Leigh Steele-Knudslien, 42, , transgender woman, North Adams, MA, 2018-01-05, homocide, false
+Viccky Gutierrez, 33, Latina, transgender woman, Los Angeles, CA, 2018-01-10, homocide, false
+Celine Walker, 36, Black, transgender woman, Jacksonville, FL, 2018-02-04, homocide, true
+Tonya "Kita" Harvey, 35, Black, transgender woman, Buffalo, NY, 2018-02-06, homocide, false
+Zakaria Fry, 28, , transgender woman, Albuquerque, NM, 2018-02-19, homocide, false
+Phylicia Mitchell, 45, Black, transgender woman, Cleveland, OH, 2018-02-23, homocide, false
+Amia Tyrae Berryman, 28, Black, transgender woman, Baton Rouge, LA, 2018-03-26, homocide, true
+Sasha Wall, 29, Black, transgender woman, Chesterfield County, SC, 2018-04-01, homocide, true
+Karla Patricia Flores-Pavón, 26, Latina, transgender woman, Dallas, TX, 2018-05-09, homocide, false
+Nina Fortson, 36, , non-binary, Atlanta, GA, 2018-05-13, homocide, false
+Gigi Pierce, 28, , transgender woman, Portland, OR, 2018-05-21, homocide, false
+Antash'a English, 38, Black, transgender woman, Jacksonville, FL, 2018-06-01, homocide, true
+Diamond Stephens, 39, Black, transgender woman, Meridian, MS, 2018-06-18, homocide, true
+Keisha Wells, 54, Black, transgender woman, Cleveland, OH, 2018-06-24, homocide, false
+Cathalina Christina James, ,Black, transgender woman, Jacksonville, FL, 2018-06-24, homocide, true
+Sasha Garden, 27, Black, transgender woman, Orlando, FL, 2018-07-19, homocide, false
+Dejanay Stanton, 24, Black, transgender woman, Chicago, IL, 2018-08-30, homocide, false
+Vontashia Bell, 18, Black, transgender woman, Shreveport, LA, 2018-08-30, homocide, true
+Shantee Tucker, , Black, transgender woman, Philadelphia, PA, 2018-09-05, homocide, false
+Londonn Moor, 20, Black, transgender woman, North Port, FL, 2018-09-08, homocide, false
+Nikki Enriquez, 28, Latina, transgender woman, Laredo, TX, 2018-09-15, homocide, false
+Ciara Minaj Carter Frazier, 31, Black, transgender woman, Chicago, IL, 2018-10-03, homocide, false
+Tydi Dansbury, 37, Black, transgender woman, Baltimore, MD, 2018-11-26, homocide, false
+Keanna Mattel, 35, Black, transgender woman, Detroit, MD, 2018-12-07, homocide, false
+Regina Denise Brown, 53, Black, transgender woman, Orangeburg, SC, 2018-10-10, homocide, false
+Mesha Campbell, 41, Black, transgender woman, Canton, MS, 2017-01-04, homocide, true
+Sean Ryan Hake, 23, ,transgender man, Sharon, PA, 2017-01-06, police, false
+Jamie Lee Wounded Arrow, 28, Native American, transgender woman, Sioux Falls, SD, 2017-01-06, homocide, false
+Jojo Striker, 23, Black, transgender woman, Toledo, OH, 2017-02-08, homocide, true
+Jaquarrius Holland, 18, Black, transgender woman, Monroe, LA, 2017-02-19, homocide, true
+Tiara Richmond, 24, Black, transgender woman, Chicago, IL, 2017-02-21, homocide, true
+Chyna Gibson, 31, Black, transgender woman, New Orleans, LA, 2017-02-25, homocide, false
+Ciara McElveen, 26, Black, transgender woman, New Orleans, LA, 2017-02-27, homocide, false
+Alphonza Watson, 38, Black, transgender woman, Baltimore, MD, 2017-03-22, homocide, false
+Kenne McFadden, 27, Black, transgender woman, San Antonio, TX, 2017-04-09, homocide, false
+Chay Reed, 28, Black, transgender woman, Miami, FL, 2017-04-21, homocide, true
+Kenneth Bostick, 59, ,transgender man, New York City, NY, 2017-05-05, homocide, false
+Sherrell Faulkner, 46, Black, transgender woman, Charlotte, NC, 2017-05-16, homocide, false
+Kendra Marie Adams, 28, Latina, transgender woman, Ithaca, NY, 2017-06-13, homocide, true
+Ava Le'Ray Barrin, 17, Black, transgender woman, Athens, GA, 2017-06-25, homocide, false
+Ebony Morgan, 28, Black, transgender woman, Lynchburg, VA, 2017-07-02, homocide, false
+TeeTee Dangerfield, 32, Black, transgender woman, Atlanta, GA, 2017-07-31, homocide, false
+Gwynevere River Song, 26, , non-binary, Waxahachie, TX, 2017-08-12, homocide, false
+Kiwi Herring, 30, Black, transgender woman, St. Louis, MO, 2017-08-22, police, false
+Kashmire Nazier Redd, 28, Black, transgender man, Gates, NY, 2017-09-05, homocide, false
+Derricka Banner, 26, Black, transgender woman, Charlotte, NC, 2017-09-12, homocide, false
+Ally Steinfeld, 17, white, transgender woman, , MO, 2017-09-01, homocide, false
+Scout Schultz, 21, , non-binary, Atlanta, GA, 2017-09-16, police, false
+Stephanie Montez, 47, Latina, transgender woman, Robstown, TX, 2017-10-21, homocide, true
+Candace Towns, 30, Black, transgender woman, Macon, GA, 2017-10-31, homocide, false
+Jaylow McGlory, 29, Black, transgender woman, Alexandria, LA, 2017-08-04, homocide, true
+Brooklyn BreYanna Stevenson, 31, Black, transgender woman, Oklahoma City, OK, 2017-11-27, homocide, false
+Brandi Seals, 26, Black, transgender woman, Houston, TX, 2017-12-13, homocide, true
+Rhiannon Layendecker, 51, , transgender woman, Englewood, FL, 2017-12-16, homocide, false
+Monica Loera, 43, Latina, transgender woman, Austin, TX, 2016-01-22, homocide, false
+Jasmine Sierra, 52, Latina, transgender woman, Bakersfield, CA, 2016-01-22, , true
+Maya Young, 25, Black, transgender woman, Frankford, PA, 2016-02-28, homocide, false
+Demarkis Stansberry, 30, Black, transgender man, Baton Rouge, LA, 2016-02-28, homocide, false
+Kedarie Johnson, 16, Black, non-binary, Burlington, IA, 2016-03-02, homocide, false
+Quartney Davia Dawsonn-Yochum, 32, , transgender woman, Los Angeles, CA, 2016-03-23, homocide, false
+Shante Thompson, 34, Black, transgender woman, Houston, TX, 2016-04-11, homocide, false
+Keyonna Blakeney, 22, Black, transgender woman, Montgomery County, MD, 2016-04-16, homocide, false
+Reecey Walker, 32, Black, transgender woman, Wichita, KS, 2016-05-01, homocide, false
+Mercedes Successful, 32, Black, transgender woman, Haines City, FL, 2016-05-15, homocide, true
+Amos Beede, 38, , transgender man, Milton, VT, 2016-05-22, homocide, false
+Goddess Diamond, 22, Black, transgender woman, New Orleans, LA, 2016-06-05, homocide, false
+Deeniquia Dodds, 22, Black, transgender woman, Washington, DC, 2016-07-13, homocide, false
+Dee Whigham, 23, Black, transgender woman, Hattiesburg, MS, 2016-07-23, homocide, false
+Erykah Tijerina, 36, Latina, transgender woman, El Paso, TX, 2016-08-08, homocide, true
+Rae'Lynn Thomas, 28, Black, transgender woman, Columbus, OH, 2016-08-08, homocide, false
+T.T. Saffore, 28, Black, transgender woman, Chicago, IL, 2016-09-11, homocide, false
+Crystal Edmonds, 32, Black, transgender woman, Baltimore, MD, 2016-09-16, homocide, false
+Jazz Alford, 30, Black, transgender woman, Birmingham, AL, 2016-09-23, homocide, false
+Brandi Bledsoe, 32, Black, transgender woman, East Cleveland, OH, 2016-10-08, homocide, false
+Noony Norwood, 29, Black, transgender woman, Richmond, VA, 2016-11-05, homocide, false
+India Monroe, 29, Black, transgender woman, Newport News, VA, 2016-12-21, homocide, true
+Dana Martin, 31, Black, transgender woman, Montgomery, AL, 2019-01-06, homocide, false
+Jazzaline Ware, 34, Black, transgender woman, Memphis, TN, 2019-03-01, homocide, false
+Ashanti Carmon, 27, Black, transgender woman, Prince George's County, MD, 2019-03-30, homocide, false
+Claire Legato, 23, Black, transgender woman, Cleveland, OH, 2019-05-14, homocide, false
+Muhlaysia Booker, 23, Black, transgender woman, Dallas, TX, 2019-05-18, homocide, false
+Michelle 'Tamika' Washington, 40, Black, transgender woman, Philadelphia, PA, 2019-05-19, homocide, false
+Paris Cameron, 20, Black, transgender woman, Detroit, MI, 2019-05-25, homocide, false
+Chynal Lindsey, 26, Black, transgender woman, Dallas, TX, 2019-06-01, homocide, false
+Chanel Scurlock, 23, Black, transgender woman, Lumberton, NC, 2019-06-06, homocide, false
+Zoe Spears, 23, Black, transgender woman, Prince George's County, MD, 2019-06-13, homocide, false
+Brooklyn Lindsey, 32, Black, transgender woman, Kansas City, MO, 2019-06-25, homocide, false
+Denali Berries Stuckey, 29, Black, transgender woman, North Charleston, SC, 2019-07-20, homocide, false
+Tracy Single, 22, Black, transgender woman, Houston, TX, 2019-07-30, homocide, false
+Kiki Fantroy, 21, Black, transgender woman, Miami, FL, 2019-07-31, homocide, false
+Bubba Walker, 55, Black, transgender woman, Charlotte, NC, 2019-07-31, homocide, false
+Pebbles LaDime Dime Doe, 24, Black, transgender woman, Allendale County, SC, 2019-08-04, homocide, false
+Jordan Cofer, 22, , transgender man, Dayton, OH, 2019-08-04, homocide, false
+Bailey Reeves, 17, Black, transgender woman, Baltimore, MD, 2019-09-02, homocide, false
+Bee Love Slater, 23, Black, transgender woman, Clewiston, FL, 2019-09-04, arson, false
+Jamagio Jamar Ja'leyah Berryman, 30, Black, non-binary, Kansas City, KS, 2019-09-13, homocide, false
+Itali Marlowe, 29, Black, transgender woman, Houston, TX, 2019-09-20, homocide, false
+Brianna 'BB' Hill, 30, Black, transgender woman, Kansas City, MO, 2019-10-14, homocide, false
