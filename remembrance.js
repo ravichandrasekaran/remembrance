@@ -328,13 +328,19 @@ function MirroredBeeswarmChart(svg, data, {
       .attr("text-anchor", "end")
       .text(xLabel));
 
+  var race_color = d3.scaleOrdinal()
+    .domain(['white', 'Black', 'Hispanic'])
+    .range(['#FFFFFF', '#000000', '#CCCCCC'])
+
   const dot = svg.append("g")
     .selectAll("circle")
     .data(I)
     .join("circle")
     .attr("cx", i => xScale(X[i]))
     .attr("cy", i => (marginTop + height - marginBottom) / 2 + Y[i])
-    .attr("r", radius / 4);
+    .attr("r", radius / 4)
+    .attr("fill", i => race_color(data[i].race))
+    ;
 
 
   svg.append('g').selectAll('.myPoint')
@@ -346,7 +352,10 @@ function MirroredBeeswarmChart(svg, data, {
     .attr("y", i => (marginTop + height - marginBottom) / 2 + Y[i] - radius)
     .attr("width", radius * 2)
     .attr("height", radius * 2)
-    .attr("fill", "#FFFFFF");
+    .attr("fill", "#CCCCCC")
+    .attr("color", "#CCCCCC")
+    .attr("stroke", "#CCCCCC")
+    ;
 
   data.forEach(function (val, idx, arr) {
     arr[idx].y = (marginTop + height - marginBottom) / 2 + Y[idx];
@@ -357,7 +366,7 @@ function MirroredBeeswarmChart(svg, data, {
     arr[idx].dx = (xScale(X[idx]) > .75 * d3.max(xRange) ? -150 : 150);
     arr[idx].data = val;
   });
-  console.log(data);
+
 
   const makeAnnotations = d3.annotation()
     .type(d3.annotationCalloutCircle)
