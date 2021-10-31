@@ -1,4 +1,24 @@
-function getData() {
+function getDataPromise() {
+  // Create data
+  const url = "https://raw.githubusercontent.com/ravichandrasekaran/remembrance/main/remembrance.csv";
+  var parseDate = d3.timeParse("%Y-%m-%d");
+  const dat = d3.csv(url, function (d) {
+    return {
+      date_of_death: parseDate(d.date_of_death),
+      name: d.name,
+      age: +d.age,
+      race: d.race,
+      gender_identity: d.gender_identity,
+      city: d.city,
+      state_abbr: d.state_abbr,
+      manner_of_death: d.manner_of_death,
+      misgendered: (d.misgendered == true)
+    }
+  });
+  return dat;
+}
+
+function getDataOriginal() {
   // Create data
   var parseTime = d3.timeParse("%Y-%m-%d");
   var data = [
@@ -144,11 +164,11 @@ function addAnnotations(gra, annotations) {
 
 // Copyright 2021 Observable, Inc.
 // Released under the ISC license.
-// https://observablehq.com/@d3/beeswarm
-function BeeswarmChart(svg, data, {
-  value = d => d, // convenience alias for x
+// https://observablehq.com/@d3/mirrored-beeswarm
+function MirroredBeeswarmChart(svg, data, {
+  value = d => d, // convience alias for x
   label, // convenience alias for xLabel
-  type = d3.scaleLinear, // convenience alias for xType
+  type = d3.scaleLinear,
   domain, // convenience alias for xDomain
   x = value, // given d in data, returns the quantitative x value
   title = null, // given d in data, returns the title
@@ -160,13 +180,13 @@ function BeeswarmChart(svg, data, {
   marginLeft = 20, // left margin, in pixels
   width = 640, // outer width, in pixels
   height, // outer height, in pixels
-  xType = type, // type of x-scale, e.g. d3.scaleLinear
+  xType = type,
   xLabel = label, // a label for the x-axis
   xDomain = domain, // [xmin, xmax]
   xRange = [marginLeft, width - marginRight] // [left, right]
 } = {}) {
   // Compute values.
-  const X = d3.map(data, x).map(x => x == null ? NaN : +x);
+  const X = d3.map(data, x);
   const T = title == null ? null : d3.map(data, title);
 
   // Compute which data points are considered defined.
@@ -183,7 +203,7 @@ function BeeswarmChart(svg, data, {
   const Y = dodge(I.map(i => xScale(X[i])), radius * 2 + padding);
 
   // Compute the default height;
-  if (height === undefined) height = d3.max(Y) + (radius + padding) * 2 + marginTop + marginBottom;
+  if (height === undefined) height = (d3.max(Y, Math.abs) + radius + padding) * 2 + marginTop + marginBottom;
 
   // Given an array of x-values and a separation radius, returns an array of y-values.
   function dodge(X, radius) {
@@ -215,8 +235,10 @@ function BeeswarmChart(svg, data, {
         Y[bi] = Infinity;
         do {
           const ai = a.index;
-          let y = Y[ai] + Math.sqrt(radius2 - (X[ai] - X[bi]) ** 2);
-          if (y < Y[bi] && !intersects(X[bi], y)) Y[bi] = y;
+          let y1 = Y[ai] + Math.sqrt(radius2 - (X[ai] - X[bi]) ** 2);
+          let y2 = Y[ai] - Math.sqrt(radius2 - (X[ai] - X[bi]) ** 2);
+          if (Math.abs(y1) < Math.abs(Y[bi]) && !intersects(X[bi], y1)) Y[bi] = y1;
+          if (Math.abs(y2) < Math.abs(Y[bi]) && !intersects(X[bi], y2)) Y[bi] = y2;
           a = a.next;
         } while (a);
       }
@@ -229,6 +251,7 @@ function BeeswarmChart(svg, data, {
 
     return Y;
   }
+
 
   svg.append("g")
     .attr("transform", `translate(0,${height - marginBottom})`)
@@ -245,15 +268,14 @@ function BeeswarmChart(svg, data, {
     .data(I)
     .join("circle")
     .attr("cx", i => xScale(X[i]))
-    .attr("cy", i => height - marginBottom - radius - padding - Y[i])
+    .attr("cy", i => (marginTop + height - marginBottom) / 2 + Y[i])
     .attr("r", radius);
 
   if (T) dot.append("title")
     .text(i => T[i]);
 
-  return svg;
+  return svg.node();
 }
-
 
 // set the dimensions and margins of the graph
 var canvas_width = 2000,
@@ -274,29 +296,19 @@ var scatter = d3.select("#scatter_area")
 ;
 
 
-// X scale and axis
-// TODO: Set up as bands to allow easier jitter.
-https://www.d3-graph-gallery.com/graph/violin_jitter.html
-// Y scale and axis
-
-// var xType = d3.scaleTime()
-//   .domain([Date.now(), Date.now() - 5 * 365.24 * 24 * 60 * 60 * 1000])
-//   .range([0, plot_height])
-//   .nice();
-
-
-
-data = getData();
-BeeswarmChart(scatter, data, {
-  width: 2000,
-  //height: 1000,
-  radius: 30,
-  value: d => d.date_of_death,
-  label: "Year",
-  type: d3.scaleTime,
-  domain: [Date.now(), Date.now() - 5 * 365.24 * 24 * 60 * 60 * 1000],
-  // xRange: [0, plot_height]
-});
+var remembrances = getDataPromise();
+remembrances.then(function (data) {
+  MirroredBeeswarmChart(scatter, data, {
+    width: 2000,
+    height: 1000,
+    radius: 30,
+    value: d => d.date_of_death,
+    label: "Year",
+    type: d3.scaleTime,
+    // domain: [Date.now() - , Date.now() - 5 * 365.24 * 24 * 60 * 60 * 1000],
+    // xRange: [0, plot_height]
+  });
+})
 
 /*
 addPanel(scatter);
