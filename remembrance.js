@@ -328,26 +328,78 @@ function MirroredBeeswarmChart(svg, data, {
       .attr("text-anchor", "end")
       .text(xLabel));
 
-  var race_color = d3.scaleOrdinal()
-    .domain(['white', 'Black', 'Hispanic'])
-    .range(['#FFFFFF', '#000000', '#CCCCCC'])
+  const race_keys = ['white', 'Black', 'Hispanic'];
+  const race_color = d3.scaleOrdinal()
+    .domain(race_keys)
+    .range(['#F5F5F5', '#8E5DE6', '#FFD28E'])
 
-  const dot = svg.append("g")
-    .selectAll("circle")
-    .data(I)
-    .join("circle")
-    .attr("cx", i => xScale(X[i]))
-    .attr("cy", i => (marginTop + height - marginBottom) / 2 + Y[i])
-    .attr("r", radius / 4)
-    .attr("fill", i => race_color(data[i].race))
+  // Rose by Xinh Studio from the Noun Project
+  // https://thenounproject.com/term/rose/652429/
+  const gender_identity_color = {
+    'transgender woman': 'assets/rose-pink.svg',
+    'transgender man': 'assets/rose-blue.svg',
+    'non-binary': 'assets/rose-white.svg'
+  }
+
+  const gender_identity_keys = ['transgender woman', 'transgender man', 'non-binary'];
+
+  svg.append('text')
+    .attr('x', 70)
+    .attr('y', 60)
+    .text('Fatal Violence Against the Transgender and Gender Non-Conforming Community')
+    .style("font-size", "32px")
     ;
 
+
+  // Legend
+  // https://www.d3-graph-gallery.com/graph/custom_legend.html
+  // Add one dot in the legend for each name.
+  svg.selectAll("race-legend-dots")
+    .data(race_keys)
+    .enter()
+    .append("circle")
+    .attr("cx", plot_width - 100)
+    .attr("cy", function (d, i) { return 50 + i * 25 })
+    .attr("r", 7)
+    .style("fill", function (d) { return race_color(d) })
+
+  // Add one dot in the legend for each name.
+  svg.selectAll("race-legend-labels")
+    .data(race_keys)
+    .enter()
+    .append("text")
+    .attr("x", plot_width - 100 + 20)
+    .attr("y", function (d, i) { return 50 + i * 25 }) // 100 is where the first dot appears. 25 is the distance between dots
+    .text(function (d) { return d })
+    .attr("text-anchor", "left")
+    .style("alignment-baseline", "middle")
+
+  svg.append('g').selectAll('gender-legend-dots')
+    .data(gender_identity_keys)
+    .enter()
+    .append('svg:image')
+    .attr("xlink:href", d => gender_identity_color[d])
+    .attr("x", plot_width - 400)
+    .attr("y", function (d, i) { return 50 + i * 25 - 10 })
+    .attr("width", radius * .7)
+    .attr("height", radius * .7)
+    ;
+
+  svg.selectAll("gender-legend-labels")
+    .data(gender_identity_keys)
+    .enter()
+    .append("text")
+    .attr("x", plot_width - 400 + 40)
+    .attr("y", function (d, i) { return 50 + i * 25 }) // 100 is where the first dot appears. 25 is the distance between dots
+    .text(function (d) { return d })
+    .attr("text-anchor", "left")
+    .style("alignment-baseline", "middle")
 
   svg.append('g').selectAll('.myPoint')
     .data(I)
     .enter()
     .append('svg:image')
-    .attr("xlink:href", "assets/rose.svg")
+    .attr("xlink:href", i => gender_identity_color[data[i].gender_identity])
     .attr("x", i => xScale(X[i]) - radius)
     .attr("y", i => (marginTop + height - marginBottom) / 2 + Y[i] - radius)
     .attr("width", radius * 2)
@@ -356,6 +408,18 @@ function MirroredBeeswarmChart(svg, data, {
     .attr("color", "#CCCCCC")
     .attr("stroke", "#CCCCCC")
     ;
+
+  svg.append("g")
+    .selectAll("circle")
+    .data(I)
+    .join("circle")
+    .attr("cx", i => xScale(X[i]) + 1)
+    .attr("cy", i => (marginTop + height - marginBottom) / 2 + Y[i])
+    .attr("r", radius / 4 + 1)
+    .attr("fill", i => race_color(data[i].race))
+    ;
+
+
 
   data.forEach(function (val, idx, arr) {
     arr[idx].y = (marginTop + height - marginBottom) / 2 + Y[idx];
@@ -415,6 +479,7 @@ var scatter = d3.select("#scatter_area")
   .attr("height", canvas_height)
   .attr("viewBox", [0, 0, canvas_width, canvas_height])
   .attr("style", "max-width: 100%; height: auto; height: intrinsic;")
+  .attr("background-color", "#f2f2f2")
   .attr("transform",
     "translate(" + margin.left + "," + margin.top + ")");
 ;
